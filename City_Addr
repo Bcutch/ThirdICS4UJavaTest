@@ -1,0 +1,63 @@
+package com.company;
+
+/**
+ * Created by 04585cut on 24/01/2019.
+ */
+public class City_Addr implements NorthAm_Addr {
+
+    private String Country = "INVALID";
+    private String Province_State = "INVALID";
+    private String PostalCode_ZIP = "INVALID";
+    private String City = "INVALID";
+    private String StreetName = "INVALID";
+    private String StreetNumber = "INVALID";
+
+    public void setCountry(String country) {
+
+        Country = country;
+    }
+
+    public void setProvince_State(String province_state){
+
+        Province_State = province_state;
+    }
+
+    public void setPostalCode_ZIP (String postalCode_ZIP){
+
+        PostalCode_ZIP = postalCode_ZIP;
+    }
+
+    public void setCity(String city) {
+
+        City = city;
+    }
+
+    public void setStreetName(String streetName) {
+
+        StreetName = streetName;
+    }
+
+    public void setStreetNumber(String streetNumber) {
+
+        StreetNumber = streetNumber;
+    }
+
+    public String getCountry(){
+        return Country;
+    }
+    public String getProvince_State(){
+        return Province_State;
+    }
+    public String getPostalCode_ZIP(){
+        return PostalCode_ZIP;
+    }
+    public String getCity(){
+        return City;
+    }
+    public String getStreetName(){
+        return StreetName;
+    }
+    public String getStreetNumber(){
+        return StreetNumber;
+    }
+}
