@@ -1,0 +1,22 @@
+package com.company;
+
+/**
+ * Created by 04585cut on 24/01/2019.
+ */
+public interface NorthAm_Addr {
+
+    String Country = null;
+    String Province_State = null;
+    String PostalCode_ZIP = null;
+
+    void setCountry(String country);
+
+    void setProvince_State(String province_state);
+
+    void setPostalCode_ZIP (String postalCode_ZIP);
+
+    String getCountry();
+    String getProvince_State();
+    String getPostalCode_ZIP();
+
+}
