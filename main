@@ -1,0 +1,91 @@
+package com.company;
+
+import java.util.*;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        City_Addr[] streets = new City_Addr[20];
+
+        for (int i = 0; i < 20; i++) {
+            streets[i] = new City_Addr();
+        }
+
+        boolean done = false;
+        Scanner scan = new Scanner(System.in);
+        String scaned;
+        int num = 0;
+
+        while (!done) {
+            System.out.println();
+            System.out.println("Please type Country name OR type 'done' if you are done.");
+
+            scaned = scan.next();
+
+            if (scaned.equals("done")) {
+                done = true;
+                break;
+            }
+            else {
+                streets[num].setCountry(scaned);
+            }
+
+            System.out.println();
+            System.out.println("Please type Province/State name.");
+
+            scaned = scan.next();
+
+            streets[num].setProvince_State(scaned);
+
+            System.out.println();
+            System.out.println("Please type Postal Code.");
+
+            scaned = scan.next();
+
+            streets[num].setPostalCode_ZIP(scaned);
+
+            System.out.println();
+            System.out.println("Please type City name.");
+
+            scaned = scan.next();
+
+            streets[num].setCity(scaned);
+
+            System.out.println();
+            System.out.println("Please type Street Number.");
+
+            scaned = scan.next();
+
+            streets[num].setStreetNumber(scaned);
+
+            System.out.println();
+            System.out.println("Please type Street Name.");
+
+            scaned = scan.next();
+
+            streets[num].setStreetName(scaned);
+
+            num++;
+
+            if (num == 20) {
+                done = true;
+            }
+
+
+        }
+
+        System.out.println();
+        System.out.println();
+        for (int i = 0; i < 20; i++) {
+            if (!streets[i].getCity().equals("INVALID")) {
+                System.out.println(streets[i].getCountry() + " " + streets[i].getProvince_State() + " " +
+                                    streets[i].getPostalCode_ZIP() + " " + streets[i].getCity() + " " +
+                                    streets[i].getStreetNumber() + " " + streets[i].getStreetName() + " Street");
+                System.out.println();
+            }
+        }
+
+
+    }
+}
